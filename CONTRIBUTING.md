@@ -75,8 +75,8 @@ GitHub Pages が自動的にデプロイされます。
 
 ```markdown
 ### Your Project Name
-- [プライバシーポリシー](https://okasy.github.io/information/{your-project-name}/privacy.html)
-- [サポート](https://okasy.github.io/information/{your-project-name}/support.html)
+- [プライバシーポリシー](https://youaoi.github.io/information/{your-project-name}/privacy.html)
+- [サポート](https://youaoi.github.io/information/{your-project-name}/support.html)
 ```
 
 ## 📋 チェックリスト

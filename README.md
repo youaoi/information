@@ -2,13 +2,13 @@
 
 複数のプロジェクト向けプライバシーポリシー、サポートページ、法務文書をホストする汎用リポジトリです。
 
-GitHub Pages で公開されています: https://okasy.github.io/information/
+GitHub Pages で公開されています: https://youaoi.github.io/information/
 
 ## 📋 ホスト中のプロジェクト
 
 ### My QR Reader
-- [プライバシーポリシー](https://okasy.github.io/information/myqrreader/privacy.html)
-- [サポート](https://okasy.github.io/information/myqrreader/support.html)
+- [プライバシーポリシー](https://youaoi.github.io/information/myqrreader/privacy.html)
+- [サポート](https://youaoi.github.io/information/myqrreader/support.html)
 
 *新しいプロジェクトを追加する場合は、[CONTRIBUTING.md](CONTRIBUTING.md) をご参照ください。*
 
@@ -81,7 +81,7 @@ information/
 ## 🔗 リンク集
 
 - [GitHub リポジトリ](https://github.com/okasy/information)
-- [GitHub Pages](https://okasy.github.io/information/)
+- [GitHub Pages](https://youaoi.github.io/information/)
 
 ## 📄 ライセンス
 
