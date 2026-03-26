@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - My QR Reader</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      color: #1c1c1e;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.8em; margin-bottom: 4px; }
+    h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #e5e5ea; padding-bottom: 6px; }
+    p, li { font-size: 0.95em; }
+    ul { padding-left: 1.5em; }
+    .updated { color: #8e8e93; font-size: 0.85em; margin-bottom: 2em; }
+    hr { border: none; border-top: 2px solid #e5e5ea; margin: 3em 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1e; color: #f2f2f7; }
+      hr, h2 { border-color: #3a3a3c; }
+      .updated { color: #8e8e93; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新: 2025年3月</p>
+
+  <p>My QR Reader（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の取り扱いに細心の注意を払います。本ポリシーは、本アプリが取得・利用する情報とその目的を説明します。</p>
+
+  <h2>収集する情報</h2>
+  <p>本アプリが収集・処理する情報は以下のとおりです。</p>
+  <ul>
+    <li><strong>スキャン履歴</strong>: QRコード・バーコードの読み取り結果をデバイス内（SharedPreferences）にのみ保存します。外部サーバーへの送信は行いません。</li>
+    <li><strong>位置情報</strong>: ユーザーが設定で有効にした場合のみ、スキャン時のGPS座標・住所をデバイス内に記録します。位置情報を外部に送信することはありません。</li>
+    <li><strong>カメラ映像</strong>: QRコード・バーコードの読み取り専用に使用します。映像の保存・送信は行いません。</li>
+    <li><strong>URLのページタイトル取得</strong>: スキャンしたURLのページタイトルを表示するため、そのURLへHTTPリクエストを行います。この通信はユーザーがスキャンしたURLに対してのみ発生します。</li>
+  </ul>
+
+  <h2>収集しない情報</h2>
+  <ul>
+    <li>ユーザーアカウント・個人識別情報</li>
+    <li>広告識別子・トラッキングデータ</li>
+    <li>クラッシュレポート・利用状況の分析データ</li>
+  </ul>
+
+  <h2>情報の共有</h2>
+  <p>本アプリは、ユーザーのデータを第三者と共有・販売・提供することは一切ありません。</p>
+
+  <h2>データの保存と削除</h2>
+  <p>すべてのデータはデバイス内にのみ保存されます。アプリの設定画面から履歴を削除できます。アプリをアンインストールするとすべてのデータが削除されます。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>プライバシーに関するご質問は、<a href="https://github.com/okasy/flutter-MyQRCodeReader/issues">GitHub Issues</a> からお願いします。</p>
+
+  <hr>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: March 2025</p>
+
+  <p>My QR Reader ("the App") respects your privacy. This policy describes what information the App collects and how it is used.</p>
+
+  <h2>Information Collected</h2>
+  <ul>
+    <li><strong>Scan history</strong>: Scan results are stored locally on your device only (SharedPreferences). No data is transmitted to external servers.</li>
+    <li><strong>Location</strong>: When enabled in settings, GPS coordinates and address at scan time are recorded on-device only. Location data is never transmitted externally.</li>
+    <li><strong>Camera</strong>: Used solely for QR code and barcode recognition. No images are saved or transmitted.</li>
+    <li><strong>URL page title fetching</strong>: To display page titles for scanned URLs, the App makes HTTP requests to those URLs. This occurs only for URLs that you scan.</li>
+  </ul>
+
+  <h2>Information Not Collected</h2>
+  <ul>
+    <li>User accounts or personal identifiers</li>
+    <li>Advertising identifiers or tracking data</li>
+    <li>Crash reports or analytics</li>
+  </ul>
+
+  <h2>Data Sharing</h2>
+  <p>The App does not share, sell, or provide your data to any third party.</p>
+
+  <h2>Data Storage and Deletion</h2>
+  <p>All data is stored on-device only. You can delete history from the Settings screen. Uninstalling the App removes all stored data.</p>
+
+  <h2>Contact</h2>
+  <p>For privacy-related inquiries, please open an issue at <a href="https://github.com/okasy/flutter-MyQRCodeReader/issues">GitHub Issues</a>.</p>
+
+</body>
+</html>

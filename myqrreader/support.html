@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート - My QR Reader</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      color: #1c1c1e;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.8em; margin-bottom: 4px; }
+    h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #e5e5ea; padding-bottom: 6px; }
+    h3 { font-size: 1em; margin-top: 1.5em; margin-bottom: 4px; }
+    p, li { font-size: 0.95em; }
+    ul { padding-left: 1.5em; }
+    a { color: #007aff; }
+    .subtitle { color: #8e8e93; font-size: 0.9em; margin-bottom: 2em; }
+    .cta {
+      display: inline-block;
+      margin-top: 0.5em;
+      padding: 10px 20px;
+      background: #007aff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+    hr { border: none; border-top: 2px solid #e5e5ea; margin: 3em 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1e; color: #f2f2f7; }
+      hr, h2 { border-color: #3a3a3c; }
+      .subtitle { color: #8e8e93; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>サポート</h1>
+  <p class="subtitle">My QR Reader</p>
+
+  <h2>よくある質問</h2>
+
+  <h3>カメラが起動しない / QRコードが読み取れない</h3>
+  <p>端末の「設定 &gt; My QR Reader」でカメラのアクセスが許可されているか確認してください。許可後、アプリを再起動してお試しください。</p>
+
+  <h3>履歴が保存されない</h3>
+  <p>設定画面の「履歴最大件数」を確認してください。上限に達している場合は古い履歴が自動削除されます。上限を増やすことで保存件数を最大500件まで増やせます。</p>
+
+  <h3>位置情報が記録されない</h3>
+  <p>設定画面で「位置情報の記録」が有効になっているか確認してください。また、端末の「設定 &gt; My QR Reader &gt; 位置情報」でアクセスが許可されているか確認してください。</p>
+
+  <h3>Wi-Fiに接続できない（Android）</h3>
+  <p>Android 10以降では、アプリからのWi-Fi接続にシステムのダイアログが表示されます。表示されたダイアログで「接続」を選択してください。</p>
+
+  <h3>ウィジェットが更新されない（iOS）</h3>
+  <p>ホーム画面ウィジェットはURLをスキャンすると自動的に更新されます。しばらくしても更新されない場合は、ウィジェットを一度削除して再追加してください。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>バグ報告・機能要望・その他のご質問は GitHub Issues からお送りください。</p>
+  <a class="cta" href="https://github.com/okasy/flutter-MyQRCodeReader/issues">GitHub Issues を開く</a>
+
+  <hr>
+
+  <h1>Support</h1>
+  <p class="subtitle">My QR Reader</p>
+
+  <h2>FAQ</h2>
+
+  <h3>Camera does not start / QR code not recognized</h3>
+  <p>Go to <strong>Settings &gt; My QR Reader</strong> on your device and make sure camera access is allowed. Restart the app after granting permission.</p>
+
+  <h3>Scan history is not saved</h3>
+  <p>Check the "Max history items" setting. When the limit is reached, older entries are automatically removed. You can increase this limit up to 500.</p>
+
+  <h3>Location is not recorded</h3>
+  <p>Make sure "Record location" is enabled in the app's settings, and that location access is allowed in <strong>Settings &gt; My QR Reader &gt; Location</strong>.</p>
+
+  <h3>Wi-Fi connection does not work (Android)</h3>
+  <p>On Android 10 and later, the system shows a dialog to confirm Wi-Fi connections. Tap "Connect" in the dialog that appears.</p>
+
+  <h3>Widget is not updating (iOS)</h3>
+  <p>The home screen widget updates automatically after scanning a URL. If it does not update, try removing and re-adding the widget.</p>
+
+  <h2>Contact</h2>
+  <p>For bug reports, feature requests, or other questions, please open a GitHub Issue.</p>
+  <a class="cta" href="https://github.com/okasy/flutter-MyQRCodeReader/issues">Open GitHub Issues</a>
+
+</body>
+</html>
