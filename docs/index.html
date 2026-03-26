@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Pages</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f7;
+      color: #1c1c1e;
+      padding: 40px 16px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .subtitle {
+      text-align: center;
+      color: #8e8e93;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .project-name {
+      font-size: 1.3em;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .docs-list {
+      list-style: none;
+    }
+    .docs-list li {
+      margin-bottom: 12px;
+    }
+    .docs-link {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #f5f5f7;
+      color: #007aff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.95em;
+      transition: background 0.2s;
+    }
+    .docs-link:hover {
+      background: #e8e8ed;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #8e8e93;
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: #007aff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #1c1c1e;
+        color: #f2f2f7;
+      }
+      .project-card {
+        background: #2c2c2e;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      .project-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      }
+      .docs-link {
+        background: #3a3a3c;
+      }
+      .docs-link:hover {
+        background: #5a5a5c;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Information Pages</h1>
+    <p class="subtitle">プロジェクト情報・ドキュメント</p>
+
+    <div class="projects">
+      <!-- My QR Reader -->
+      <div class="project-card">
+        <div class="project-name">My QR Reader</div>
+        <ul class="docs-list">
+          <li><a href="myqrreader/privacy.html" class="docs-link">プライバシーポリシー</a></li>
+          <li><a href="myqrreader/support.html" class="docs-link">サポート</a></li>
+        </ul>
+      </div>
+
+      <!-- 新規プロジェクトのテンプレート -->
+      <!-- <div class="project-card">
+        <div class="project-name">Project Name</div>
+        <ul class="docs-list">
+          <li><a href="project-slug/privacy.html" class="docs-link">プライバシーポリシー</a></li>
+          <li><a href="project-slug/support.html" class="docs-link">サポート</a></li>
+        </ul>
+      </div> -->
+    </div>
+
+    <div class="footer">
+      <p>
+        <a href="https://github.com/okasy/information">GitHub リポジトリ</a> •
+        <a href="https://github.com/okasy/information/blob/main/CONTRIBUTING.md">追加ガイド</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
