@@ -37,7 +37,7 @@
   <p>本アプリが収集・処理する情報は以下のとおりです。</p>
   <ul>
     <li><strong>ギャラリーデータ</strong>: プロンプト本文、タグ、お気に入り、作成日時をデバイス内（SwiftData）に保存します。アカウントは作成せず、本アプリ運営者のサーバーへ送信することはありません。</li>
-    <li><strong>写真</strong>: 写真を選んだ場合、Photos から原本を削除しても残るよう、アプリ内ストレージへコピー（原寸とサムネイル）を保存します。翻訳などテキスト送信を伴う機能を使わない限り、写真は外部へ送信されません。</li>
+    <li><strong>写真</strong>: 写真を選んだ場合、Photos から原本を削除しても残るよう、アプリ内ストレージへコピー（原寸とサムネイル）を保存します。写真は外部へ送信しません。</li>
     <li><strong>Composer の履歴</strong>: 直近の Composer セッション（最大5件）とクリップボード履歴をデバイス内（UserDefaults）に保存します。</li>
     <li><strong>任意の翻訳</strong>: Composer の翻訳は任意です。ご自身の OpenAI API キーを設定画面で保存し、翻訳を実行した場合のみ、翻訳対象のプロンプト本文が OpenAI へ送信されます。API キーはデバイスの Keychain に保存されます。本アプリ運営者がキーやプロンプトを受け取るサーバーはありません。</li>
   </ul>
@@ -69,7 +69,7 @@
   <h2>Information Collected</h2>
   <ul>
     <li><strong>Gallery data</strong>: Prompt text, tags, favorites, and creation dates are stored on this device (SwiftData). The App does not create an account and does not send this data to a developer-operated server.</li>
-    <li><strong>Photos</strong>: When you choose a photo, the App saves a copy (original and thumbnail) in local storage so it remains available even if you delete the original from Photos. Photos are not uploaded unless you later use a feature that sends text to a service you configure.</li>
+    <li><strong>Photos</strong>: When you choose a photo, the App saves a copy (original and thumbnail) in local storage so it remains available even if you delete the original from Photos. Photos are not uploaded.</li>
     <li><strong>Composer history</strong>: Recent Composer sessions (up to 5) and clipboard history are stored on-device (UserDefaults).</li>
     <li><strong>Optional translation</strong>: Composer translation is optional. If you save your own OpenAI API key in Settings and run a translation, the prompt text is sent to OpenAI. The API key is stored in this device’s Keychain. The App does not receive your key or prompt text on any developer-operated server.</li>
   </ul>
