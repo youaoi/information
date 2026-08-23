@@ -80,7 +80,7 @@ information/
 
 ## 🔗 リンク集
 
-- [GitHub リポジトリ](https://github.com/okasy/information)
+- [GitHub リポジトリ](https://github.com/youaoi/information)
 - [GitHub Pages](https://youaoi.github.io/information/)
 
 ## 📄 ライセンス
