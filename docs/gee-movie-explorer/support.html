@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート - Gee Movie Explorer</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      color: #1c1c1e;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.8em; margin-bottom: 4px; }
+    h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #e5e5ea; padding-bottom: 6px; }
+    h3 { font-size: 1em; margin-top: 1.5em; margin-bottom: 4px; }
+    p, li { font-size: 0.95em; }
+    ul { padding-left: 1.5em; }
+    a { color: #007aff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .subtitle { color: #8e8e93; font-size: 0.9em; margin-bottom: 2em; }
+    .cta {
+      display: inline-block;
+      margin-top: 0.5em;
+      padding: 10px 20px;
+      background: #007aff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+    .cta:hover { opacity: 0.9; }
+    hr { border: none; border-top: 2px solid #e5e5ea; margin: 3em 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1e; color: #f2f2f7; }
+      hr, h2 { border-color: #3a3a3c; }
+      .subtitle { color: #8e8e93; }
+    }
+  </style>
+</head>
+<body>
+  <h1>サポート</h1>
+  <p class="subtitle">Gee Movie Explorer</p>
+
+  <p>Gee Movie Explorerは、Webページを閲覧しながら動画を保存し、保存済みの動画をオフラインで再生するミニマルブラウザです。</p>
+
+  <h2>基本的な使い方</h2>
+  <ol>
+    <li>アドレス欄にHTTP(S) URLを入力してページを開きます。</li>
+    <li>動画の検出・保存ボタンをタップします。</li>
+    <li>「保存候補」で動画、画質、容量を確認して保存します。</li>
+    <li>保存が完了したら「保存動画」から再生します。</li>
+  </ol>
+
+  <h2>よくある質問</h2>
+
+  <h3>どの動画を保存できますか？</h3>
+  <p>ページ内のvideo/source要素や明示的なURLから取得できるMP4、非DRMのHLS、対象範囲内の非DRM・静的DASHを扱います。保存候補として表示されても、配信元の応答やアクセス権によって保存できない場合があります。</p>
+
+  <h3>保存候補が表示されません</h3>
+  <p>ページを読み込んだ後に検出ボタンを押してください。動画URLがページ内に公開されていない、MSEのblob URLで再生している、DRMや署名付きストリームを使っている場合は対象外です。ページを再読み込みしてから、もう一度お試しください。</p>
+
+  <h3>保存した動画はどうやって見ますか？</h3>
+  <p>「保存動画」を開いて動画をタップしてください。保存が完了した動画は、元のWebサイトや動画URLに接続できない状態でも端末内から再生できます。保存途中の動画はオフライン再生できません。</p>
+
+  <h3>バックグラウンドでも保存できますか？</h3>
+  <p>MP4と終了するHLS VODは、iOSのバックグラウンド転送に対応します。ライブHLSの収録は前面表示中のみで、完了したい時点で「完了」をタップしてください。アプリを強制終了すると、iOSがバックグラウンド転送をキャンセルする場合があります。</p>
+
+  <h3>共有シートから動画を追加できますか？</h3>
+  <p>iOSの共有シートでGee Movie Explorerを選択すると、対応する動画ファイルを保存動画へ追加できます。共有後に本アプリを開き、保存動画一覧を確認してください。</p>
+
+  <h3>保存動画を削除できますか？</h3>
+  <p>「保存動画」で行を左へスワイプするか、選択モードから動画を選んで削除できます。削除した動画を本アプリから復元することはできません。</p>
+
+  <h2>トラブルシューティング</h2>
+
+  <h3>Webページが開きません</h3>
+  <ul>
+    <li>端末がインターネットに接続されていることを確認してください。</li>
+    <li>URLがhttpまたはhttpsで始まっていることを確認してください。</li>
+    <li>Safariで同じURLが開けるか確認してください。</li>
+    <li>サイト側がWebView、地域、ログイン状態などを制限していないか確認してください。</li>
+  </ul>
+
+  <h3>保存に失敗します</h3>
+  <ul>
+    <li>動画URLがSafariや元ページで再生できるか確認してください。</li>
+    <li>端末の空き容量を確認してください。</li>
+    <li>保存候補の画質を下げて再試行してください。</li>
+    <li>ログインやCookieが必要なサイトでは、WebView内で必要な状態を整えてから保存してください。</li>
+    <li>DRM、アクセス制御、署名の回避を必要とする配信は対応していません。</li>
+  </ul>
+
+  <h3>保存済み動画を再生できません</h3>
+  <ul>
+    <li>保存処理が「保存済み」になっていることを確認してください。</li>
+    <li>動画を一度削除して、空き容量を確保してから再保存してください。</li>
+    <li>元の配信形式が本アプリの対象範囲（MP4、非DRMのHLS、対象範囲内のDASH）か確認してください。</li>
+  </ul>
+
+  <h2>対応しない配信</h2>
+  <p>DRM、MSEのデコード済みバッファ、認証・アクセス制御の回避が必要な配信、複雑なSegmentList/SegmentBaseを使うDASH、WebMなどは対象外です。動画を保存する前に、コンテンツの権利と配信元の利用規約を確認してください。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>解決しない場合は、発生した操作、iOSのバージョン、アプリのバージョン、可能であれば対象ページのドメインとエラーメッセージを添えて、<a class="cta" href="https://x.com/youaoi0819">X（旧Twitter）でお問い合わせください</a>。パスワードやCookieなどの機密情報は送らないでください。</p>
+
+  <hr>
+
+  <h1>Support</h1>
+  <p class="subtitle">Gee Movie Explorer</p>
+
+  <p>Gee Movie Explorer is a minimal browser for saving selected online media and playing completed downloads offline.</p>
+
+  <h2>Getting Started</h2>
+  <ol>
+    <li>Enter an HTTP(S) URL and open the page.</li>
+    <li>Tap the detect and save media button.</li>
+    <li>Review the media, quality, and size in the Save Candidates screen.</li>
+    <li>After saving completes, open the video from Saved Videos.</li>
+  </ol>
+
+  <h2>FAQ</h2>
+
+  <h3>What media can I save?</h3>
+  <p>The App handles MP4 URLs, non-DRM HLS, and supported non-DRM static DASH found in video/source elements or explicit page URLs. A candidate may still fail if the server requires access or returns an unsupported response.</p>
+
+  <h3>Why are there no save candidates?</h3>
+  <p>Run detection after the page has loaded. Media that is not exposed as a page URL, MSE blob URLs, DRM streams, and signed or protected streams are outside the supported scope. Reload the page and try again.</p>
+
+  <h3>How do I play a saved video?</h3>
+  <p>Open Saved Videos and tap a video. Completed downloads play from the device without connecting to the original website. Partially saved media cannot be played offline.</p>
+
+  <h3>Does saving work in the background?</h3>
+  <p>MP4 and finite HLS VOD downloads use iOS background transfer. Live HLS recording is supported only while the App is in the foreground; tap Complete when you want to finish it. Force-quitting the App may cancel background transfers.</p>
+
+  <h3>Can I add a video from the share sheet?</h3>
+  <p>Choose Gee Movie Explorer in the iOS share sheet for a compatible video file. Open the App afterward and check Saved Videos.</p>
+
+  <h3>Can I delete saved videos?</h3>
+  <p>Swipe left on a row in Saved Videos or use selection mode to delete videos. Deleted videos cannot be restored by the App.</p>
+
+  <h2>Troubleshooting</h2>
+
+  <h3>A web page does not load</h3>
+  <ul>
+    <li>Check the device's internet connection.</li>
+    <li>Make sure the URL starts with http or https.</li>
+    <li>Check whether the same URL opens in Safari.</li>
+    <li>The site may restrict WebViews, regions, or sign-in states.</li>
+  </ul>
+
+  <h3>A download fails</h3>
+  <ul>
+    <li>Confirm that the media plays in Safari or on the original page.</li>
+    <li>Check available device storage.</li>
+    <li>Try a lower quality candidate.</li>
+    <li>For sites requiring sign-in or cookies, establish the required state in the WebView before saving.</li>
+    <li>The App does not bypass DRM, access controls, or stream signatures.</li>
+  </ul>
+
+  <h3>A saved video does not play</h3>
+  <ul>
+    <li>Confirm that the status is Saved.</li>
+    <li>Delete the item and save it again after checking available storage.</li>
+    <li>Confirm that the media is MP4, non-DRM HLS, or supported DASH.</li>
+  </ul>
+
+  <h2>Unsupported Streams</h2>
+  <p>DRM, decoded MSE buffers, streams requiring bypasses of authentication or access controls, complex DASH SegmentList/SegmentBase manifests, and WebM are not supported. Confirm that you have the right to save the content and follow the source site's terms.</p>
+
+  <h2>Contact</h2>
+  <p>If the issue continues, include the steps, iOS version, App version, and, when possible, the affected domain and error message when contacting us through <a class="cta" href="https://x.com/youaoi0819">X (formerly Twitter)</a>. Do not send passwords or cookies.</p>
+</body>
+</html>

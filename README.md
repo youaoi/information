@@ -10,6 +10,10 @@ GitHub Pages で公開されています: https://youaoi.github.io/information/
 - [プライバシーポリシー](https://youaoi.github.io/information/myqrreader/privacy.html)
 - [サポート](https://youaoi.github.io/information/myqrreader/support.html)
 
+### Gee Movie Explorer
+- [プライバシーポリシー](https://youaoi.github.io/information/gee-movie-explorer/privacy.html)
+- [サポート](https://youaoi.github.io/information/gee-movie-explorer/support.html)
+
 *新しいプロジェクトを追加する場合は、[CONTRIBUTING.md](CONTRIBUTING.md) をご参照ください。*
 
 ## 📁 リポジトリ構造
