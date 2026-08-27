@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gee Movie ExplorerのApp Review用デモページ。">
+  <title>審査用デモ - Gee Movie Explorer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --ink: #f7f7fb;
+      --muted: #b8b8c8;
+      --surface: #15192d;
+      --line: rgba(255, 255, 255, 0.14);
+      --accent: #ff6f91;
+      --accent-soft: rgba(255, 111, 145, 0.15);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #090c18;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: #ffb3c5; }
+    .shell { width: min(860px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; text-decoration: none; }
+    .brand-mark { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 10px; background: var(--accent); color: #160914; font-weight: 800; }
+    .eyebrow { margin: 52px 0 10px; color: var(--accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h1, h2 { line-height: 1.2; }
+    h1 { max-width: 720px; margin: 0; font-size: clamp(2.2rem, 7vw, 4.5rem); letter-spacing: -0.04em; }
+    .lead { max-width: 640px; margin: 20px 0 28px; color: var(--muted); font-size: 1.1rem; }
+    .notice { margin: 28px 0; padding: 16px 18px; border: 1px solid rgba(255, 111, 145, 0.45); border-radius: 16px; background: var(--accent-soft); }
+    .notice strong { color: #ffd5df; }
+    .video-card { overflow: hidden; margin: 28px 0 42px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28); }
+    video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+    .video-caption { padding: 16px 20px 20px; }
+    .video-caption h2 { margin: 0 0 4px; font-size: 1.2rem; }
+    .video-caption p { margin: 0; color: var(--muted); }
+    .section { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+    .section h2 { margin: 0 0 16px; font-size: 1.55rem; }
+    ol { margin: 0; padding-left: 1.4rem; }
+    li { margin: 8px 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+    .card { padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+    .card strong { display: block; margin-bottom: 4px; }
+    .card span { color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 22px; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 24px, 860px); padding-top: 20px; }
+      .eyebrow { margin-top: 42px; }
+      .grid { grid-template-columns: 1fr; }
+      .video-card { border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="./support.html">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>Gee Movie Explorer</span>
+      </a>
+    </header>
+
+    <main>
+      <p class="eyebrow">App Review Demo / Safe Sample Content</p>
+      <h1>見つけた動画を、あとで。</h1>
+      <p class="lead">Gee Movie Explorerは、Webページ上の動画をユーザーが明示的に選択して端末へ保存し、オフラインで再生するiOS向けミニマルブラウザです。</p>
+
+      <div class="notice">
+        <strong>App Review用ページ</strong><br>
+        このページは審査用の安全なサンプルコンテンツを提供します。ログイン、課金、個人情報、特別な権限は必要ありません。
+      </div>
+
+      <section class="video-card" aria-labelledby="video-title">
+        <video controls playsinline preload="metadata" poster="./feature-poster.jpg">
+          <source src="./feature-moment.mp4" type="video/mp4">
+          お使いのブラウザは動画再生に対応していません。
+        </video>
+        <div class="video-caption">
+          <h2 id="video-title">Neon after rain</h2>
+          <p>MP4のサンプル動画。Gee Movie Explorerで保存候補として検出できます。</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="ja-steps">
+        <h2 id="ja-steps">アプリでの審査手順</h2>
+        <ol>
+          <li>Gee Movie Explorerを起動します。</li>
+          <li>このページのHTTPS URLをアドレス欄へ入力します。</li>
+          <li>ページ読み込み後、動画検出・保存ボタンをタップします。</li>
+          <li>「Neon after rain」のMP4候補を確認し、保存します。</li>
+          <li>「保存動画」を開き、保存済み動画を再生します。</li>
+          <li>保存完了後に機内モードをオンにすると、元ページへ接続せず再生できます。</li>
+        </ol>
+      </section>
+
+      <section class="section" aria-labelledby="ja-details">
+        <h2 id="ja-details">アプリの概要</h2>
+        <div class="grid">
+          <div class="card"><strong>ログイン</strong><span>不要です</span></div>
+          <div class="card"><strong>課金・購読</strong><span>ありません</span></div>
+          <div class="card"><strong>保存対象</strong><span>ユーザーが選択した動画のみ</span></div>
+          <div class="card"><strong>保護回避</strong><span>DRM・アクセス制御を回避しません</span></div>
+        </div>
+      </section>
+
+      <section class="section" lang="en" aria-labelledby="en-title">
+        <h2 id="en-title">For App Review</h2>
+        <p>Gee Movie Explorer is a minimal iOS browser that lets users explicitly select web videos, save them on the device, and play completed downloads offline.</p>
+        <ol>
+          <li>Launch Gee Movie Explorer.</li>
+          <li>Enter this page's HTTPS URL.</li>
+          <li>Tap the media detection and save button.</li>
+          <li>Select the “Neon after rain” MP4 candidate and save it.</li>
+          <li>Open Saved Videos and play the completed download.</li>
+          <li>After the download completes, enable Airplane Mode to verify offline playback.</li>
+        </ol>
+        <p>No login, payment, subscription, personal information, or special device permission is required. The app does not bypass DRM or access controls.</p>
+      </section>
+
+      <nav class="links" aria-label="Gee Movie Explorer links">
+        <a href="./privacy.html">プライバシーポリシー / Privacy Policy</a>
+        <a href="./support.html">サポート / Support</a>
+      </nav>
+    </main>
+
+    <footer>Safe sample content for App Review. Gee Movie Explorer v1.0.</footer>
+  </div>
+</body>
+</html>

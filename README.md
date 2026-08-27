@@ -17,6 +17,7 @@ GitHub Pages で公開されています: https://youaoi.github.io/information/
 ### Gee Movie Explorer
 - [プライバシーポリシー](https://youaoi.github.io/information/gee-movie-explorer/privacy.html)
 - [サポート](https://youaoi.github.io/information/gee-movie-explorer/support.html)
+- [審査用デモ](https://youaoi.github.io/information/gee-movie-explorer/demo.html)
 
 *新しいプロジェクトを追加する場合は、[CONTRIBUTING.md](CONTRIBUTING.md) をご参照ください。*
 
@@ -29,6 +30,7 @@ information/
 │   └── {project-name}/
 │       ├── privacy.html        # プライバシーポリシー
 │       ├── support.html        # サポートページ
+│       ├── demo.html           # 審査用デモ（必要な場合）
 │       └── terms.html          # 利用規約（オプション）
 ├── templates/
 │   ├── privacy-template.html   # プライバシーポリシー雛形
