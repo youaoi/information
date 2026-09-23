@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - Gmail Unread Tracker</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      color: #1c1c1e;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.8em; margin-bottom: 4px; }
+    h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #e5e5ea; padding-bottom: 6px; }
+    p, li { font-size: 0.95em; }
+    ul { padding-left: 1.5em; }
+    .updated { color: #8e8e93; font-size: 0.85em; margin-bottom: 2em; }
+    a { color: #007aff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: none; border-top: 2px solid #e5e5ea; margin: 3em 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1e; color: #f2f2f7; }
+      hr, h2 { border-color: #3a3a3c; }
+      .updated { color: #8e8e93; }
+    }
+  </style>
+</head>
+<body>
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新: 2026年9月23日</p>
+
+  <p>Gmail Unread Tracker（以下「本拡張機能」）は、ログイン済みのGmailアカウントの未読メール件数をChromeのバッジとGmail画面に表示する拡張機能です。本ポリシーは、本拡張機能が処理する情報とその取り扱いを説明します。</p>
+
+  <h2>処理する情報</h2>
+  <p>本拡張機能は、機能の提供に必要な範囲で次の情報を処理します。</p>
+  <ul>
+    <li><strong>Gmailアカウント情報</strong>: ユーザーが追跡対象として登録したGmailアカウントのメールアドレス、アカウントの表示順、メインアカウントと合算対象の設定を処理します。代理アクセスの登録では、代理アカウントのメールアドレスとGmail上の識別情報も処理します。</li>
+    <li><strong>未読件数</strong>: GmailのAtomフィードから未読件数を取得し、アカウントごとの件数、合算件数、最終更新時刻、取得状態を表示します。</li>
+    <li><strong>Gmail画面の情報</strong>: Gmail画面に追跡ボタンやラベル別の未読表示を追加するため、表示中のアカウント識別情報、ラベル名、未読表示を読み取ります。</li>
+    <li><strong>設定と診断情報</strong>: 未読件数の取得間隔、取得結果、HTTPステータス、取得時刻などをChromeのローカルストレージに保存します。</li>
+  </ul>
+
+  <h2>利用目的</h2>
+  <ul>
+    <li>Gmailアカウントの未読件数を定期的に取得して拡張機能のバッジへ表示するため</li>
+    <li>Gmail画面にアカウント追跡ボタンとラベル別の未読表示を追加するため</li>
+    <li>ユーザーが選択したアカウントの未読件数を合算し、ポップアップとオプション画面に表示するため</li>
+    <li>取得失敗の状態を表示し、ユーザーが問題を確認できるようにするため</li>
+  </ul>
+
+  <h2>Gmailとの通信</h2>
+  <p>本拡張機能は、ユーザーがChromeでログインしているGmailのセッションを使い、<code>mail.google.com</code> のAtomフィードへHTTPSで通信します。この通信は未読件数の取得に必要なもので、開発者が運用するサーバーを経由しません。Gmailの認証情報やCookieを本拡張機能が読み取ったり、開発者へ送信したりすることはありません。</p>
+
+  <h2>取得しない情報</h2>
+  <p>本拡張機能は、次の情報を機能の目的に利用しません。</p>
+  <ul>
+    <li>メール本文、添付ファイル、連絡先の内容</li>
+    <li>広告識別子、広告プロファイル、行動分析データ</li>
+    <li>クラッシュレポートや利用状況分析を目的としたデータ</li>
+  </ul>
+
+  <h2>第三者との共有</h2>
+  <p>本拡張機能は、処理した情報を開発者のサーバーや広告事業者などの第三者へ送信、販売、共有しません。情報は、Gmailの未読件数を表示するという単一の目的に必要な範囲でのみ使用します。</p>
+
+  <h2>保存と削除</h2>
+  <p>設定、追跡対象アカウント、未読件数、取得状態はChromeのローカルストレージに保存されます。オプション画面から追跡対象アカウントを削除できます。本拡張機能をChromeからアンインストールすると、保存されていたローカルデータはChromeの管理に従って削除されます。</p>
+
+  <h2>ユーザーの選択</h2>
+  <ul>
+    <li>Gmailのサイドバーから、追跡するアカウントをユーザーが選択できます。</li>
+    <li>オプション画面から、追跡対象、メインアカウント、合算対象、取得間隔を変更できます。</li>
+    <li>本拡張機能をアンインストールすることで、以後の情報処理を停止できます。</li>
+  </ul>
+
+  <h2>ポリシーの変更</h2>
+  <p>機能や法令への対応に伴い、本ポリシーを更新することがあります。変更後の内容はこのページに掲載し、最終更新日を更新します。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>プライバシーに関するご質問は、<a href="https://x.com/youaoi0819">X（旧Twitter）</a>からお送りください。</p>
+
+  <hr>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: September 23, 2026</p>
+
+  <p>Gmail Unread Tracker (the “Extension”) displays unread Gmail counts in the Chrome extension badge and on Gmail pages. This policy explains what information the Extension processes and how it is handled.</p>
+
+  <h2>Information Processed</h2>
+  <p>The Extension processes the following information only as needed to provide its features:</p>
+  <ul>
+    <li><strong>Gmail account information</strong>: The email address, display order, primary-account setting, and aggregate-account setting for Gmail accounts that the user chooses to track. For delegated access, the Extension also processes the delegated account email address and Gmail identifier needed to access that mailbox.</li>
+    <li><strong>Unread counts</strong>: Unread counts from Gmail Atom feeds, including per-account counts, aggregate counts, last-update time, and fetch status.</li>
+    <li><strong>Gmail page information</strong>: The account identifier, label names, and unread indicators needed to add tracking controls and label-level unread indicators to Gmail pages.</li>
+    <li><strong>Settings and diagnostics</strong>: The polling interval, fetch results, HTTP status, and timestamps stored in Chrome local storage.</li>
+  </ul>
+
+  <h2>Purposes of Use</h2>
+  <ul>
+    <li>Periodically retrieve Gmail unread counts and display them in the extension badge</li>
+    <li>Add account tracking controls and label-level unread indicators to Gmail pages</li>
+    <li>Aggregate the unread counts selected by the user and display them in the popup and Options page</li>
+    <li>Show fetch failures so that the user can check the problem</li>
+  </ul>
+
+  <h2>Communication with Gmail</h2>
+  <p>The Extension uses the Gmail session in which the user is signed in to communicate with Atom feeds on <code>mail.google.com</code> over HTTPS. This communication is required to retrieve unread counts and does not pass through a developer-operated server. The Extension does not read or send Gmail authentication credentials or cookies to the developer.</p>
+
+  <h2>Information Not Used</h2>
+  <p>The Extension does not use the following information for its purpose:</p>
+  <ul>
+    <li>Email bodies, attachments, or contact contents</li>
+    <li>Advertising identifiers, advertising profiles, or behavioral analytics</li>
+    <li>Data for crash reporting or usage analytics</li>
+  </ul>
+
+  <h2>Data Sharing</h2>
+  <p>The Extension does not send, sell, or share processed information with the developer’s servers, advertisers, or other third parties. Information is used only as necessary for the single purpose of displaying Gmail unread counts.</p>
+
+  <h2>Storage and Deletion</h2>
+  <p>Settings, tracked accounts, unread counts, and fetch status are stored in Chrome local storage. The user can remove tracked accounts from the Options page. Uninstalling the Extension removes locally stored data according to Chrome’s behavior.</p>
+
+  <h2>Your Choices</h2>
+  <ul>
+    <li>The user chooses which accounts to track from the Gmail sidebar.</li>
+    <li>The user can change tracked accounts, the primary account, aggregate accounts, and the polling interval from the Options page.</li>
+    <li>Uninstalling the Extension stops further processing.</li>
+  </ul>
+
+  <h2>Changes to This Policy</h2>
+  <p>This policy may be updated when features or legal requirements change. The updated version will be posted on this page with a new date.</p>
+
+  <h2>Contact</h2>
+  <p>For privacy-related questions, please contact us through <a href="https://x.com/youaoi0819">X (formerly Twitter)</a>.</p>
+</body>
+</html>

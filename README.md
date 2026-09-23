@@ -19,6 +19,9 @@ GitHub Pages で公開されています: https://youaoi.github.io/information/
 - [サポート](https://youaoi.github.io/information/gee-movie-explorer/support.html)
 - [審査用デモ](https://youaoi.github.io/information/gee-movie-explorer/demo.html)
 
+### Gmail Unread Tracker
+- [プライバシーポリシー](https://youaoi.github.io/information/gmail-unread-tracker/privacy.html)
+
 *新しいプロジェクトを追加する場合は、[CONTRIBUTING.md](CONTRIBUTING.md) をご参照ください。*
 
 ## 📁 リポジトリ構造
