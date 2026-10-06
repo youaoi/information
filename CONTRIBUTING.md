@@ -1,146 +1,164 @@
 # 新規プロジェクトの追加ガイド
 
-このリポジトリに新しいプロジェクトのドキュメントを追加する方法を説明します。
+このリポジトリは、アプリや拡張機能の概要・ドキュメント・配布先を一覧で掲載するためのものです。
+新しいプロジェクトを追加するときは、配布形式に応じたセクションへ登録してください。
 
-## ステップバイステップ
+## 掲載セクション
 
-### 1. ディレクトリ構造の作成
+`docs/index.html` と `README.md` には、次の3つのセクションがあります。
 
-プロジェクト用ディレクトリを `docs/` に作成します：
+- **App**: iOS・macOSなどのアプリ
+- **Chrome拡張**: Chrome Web Storeで配布する拡張機能
+- **VS Code拡張**: VS Code Marketplaceで配布する拡張機能
+
+## 追加手順
+
+### 1. ドキュメントを作成する
+
+このリポジトリでプライバシーポリシーやサポートページを公開する場合は、プロジェクト用ディレクトリを作成します。
 
 ```bash
-mkdir -p docs/{your-project-name}
+mkdir -p docs/{project-slug}
+cp templates/privacy-template.html docs/{project-slug}/privacy.html
+cp templates/support-template.html docs/{project-slug}/support.html
 ```
 
-ディレクトリ名はプロジェクト識別子として使用します（例: `myqrreader`, `myapp`, `awesome-tool`）
-
-### 2. テンプレートをコピー
-
-```bash
-# プライバシーポリシー
-cp templates/privacy-template.html docs/{your-project-name}/privacy.html
-
-# サポートページ
-cp templates/support-template.html docs/{your-project-name}/support.html
-```
-
-### 3. 内容を編集
-
-各HTMLファイルを開いて、以下の部分をプロジェクト固有の内容に編集します：
+プロジェクトに必要なページだけを作成できます。たとえばプライバシーポリシーだけを掲載する場合は、`support.html` は不要です。
 
 #### プライバシーポリシー (`privacy.html`)
-- `<title>` タグ内のアプリ名
-- データ収集・利用方針
-- 連絡先情報
-- 最終更新日
+
+- `<title>` と見出しをプロジェクト名に変更
+- 取得・利用する情報とその目的を記載
+- 情報の共有・保管・削除方針を記載
+- 問い合わせ先と最終更新日を更新
 
 #### サポートページ (`support.html`)
-- `<title>` タグ内のアプリ名
-- よくある質問と回答
-- トラブルシューティング情報
-- お問い合わせ先
 
-### 4. スタイル（オプション）
+- `<title>` と見出しをプロジェクト名に変更
+- 機能概要、FAQ、トラブルシューティングを記載
+- 問い合わせ先を記載
 
-テンプレートには基本的なスタイルが含まれています。必要に応じて調整できます：
+### 2. アイコンを追加する
 
-```css
-body { max-width: 800px; margin: 0 auto; padding: 24px 16px; }
-h1 { font-size: 1.8em; }
-h2 { font-size: 1.2em; border-bottom: 1px solid #e5e5ea; }
+カードに表示するアイコンを `docs/product-icons/` に追加します。
+
+- ファイル名はプロジェクト識別子に合わせる（例: `my-project.png`）
+- PNGまたはSVGを使用する
+- 正方形の画像を推奨
+- 外部URLではなく、リポジトリ内の画像を使用する
+
+既存のカードと同じく、`docs/index.html` から相対パスで参照します。
+
+```html
+<img class="project-icon" src="product-icons/my-project.png" alt="" aria-hidden="true">
 ```
 
-### 5. 全言語対応（推奨）
+VS Code拡張のアイコンで明るい下地が必要な場合は、`vscode-icon` クラスを追加します。
 
-テンプレートはデフォルトで日本語・英語のバイリンガル対応になっています。
+```html
+<img class="project-icon vscode-icon" src="product-icons/my-project.png" alt="" aria-hidden="true">
+```
 
-- **日本語ブロック**: `<h1>プライバシーポリシー</h1>` の後のセクション
-- **英語ブロック**: `<hr>` で区切られた下部のセクション
+### 3. 一覧ページにカードを追加する
 
-単一言語のみの場合は、不要な部分を削除してください。
+`docs/index.html` の配布形式に合う `<section>` 内へ、プロジェクトカードを追加します。
 
-### 6. コミット＆プッシュ
+カードには次の情報を含めます。
+
+- アイコン
+- プロジェクト名
+- 簡潔な概要（`project-description`）
+- このリポジトリで公開しているドキュメントへのリンク
+- GitHub、App Store、Chrome Web Store、VS Code Marketplaceなどの配布先リンク
+
+概要とリンクの例：
+
+```html
+<div class="project-card">
+  <div class="project-heading">
+    <img class="project-icon" src="product-icons/my-project.png" alt="" aria-hidden="true">
+    <h3 class="project-name">My Project</h3>
+  </div>
+  <p class="project-description">プロジェクトの主な機能を簡潔に説明します。</p>
+  <ul class="docs-list">
+    <li><a href="my-project/privacy.html" class="docs-link">プライバシーポリシー</a></li>
+    <li><a href="https://github.com/owner/my-project" class="docs-link" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a></li>
+  </ul>
+  <div class="store-area">
+    <a class="store-link" href="https://example.com/download" target="_blank" rel="noopener noreferrer">
+      <span class="store-icon" aria-hidden="true">↗</span>
+      配布先で見る
+    </a>
+  </div>
+</div>
+```
+
+公開状況やバージョンなどの補足ステータスはカードに追加せず、配布先へのリンクだけを掲載します。
+
+### 4. README.mdを更新する
+
+`README.md` の同じ配布形式セクションに、概要と関連リンクを追加します。
+
+```markdown
+#### My Project
+- プロジェクトの主な機能を簡潔に説明します
+- [プライバシーポリシー](https://youaoi.github.io/information/my-project/privacy.html)
+- [配布先](https://example.com/download)
+```
+
+### 5. 確認してコミットする
 
 ```bash
-git add docs/{your-project-name}/
-git commit -m "Add documentation for {your-project-name}"
+git diff --check
+git add docs/ README.md CONTRIBUTING.md
+git commit -m "Add documentation for my project"
 git push origin main
 ```
 
-GitHub Pages が自動的にデプロイされます。
+GitHub Pagesは、`main` ブランチへのプッシュ後に自動デプロイされます。
 
-### 7. README.md を更新
+## チェックリスト
 
-[docs/index.html](docs/index.html) と [README.md](README.md) の「App」「Chrome拡張」「VS Code拡張」のうち、配布形式に合うセクションに新規プロジェクトを追加します。ドキュメントをこのリポジトリでホストしない場合は、プロジェクトのGitHubリポジトリへのリンクを掲載できます。
-
-README.md のプロジェクト記載例：
-
-```markdown
-#### Your Project Name
-- [プライバシーポリシー](https://youaoi.github.io/information/{your-project-name}/privacy.html)
-- [サポート](https://youaoi.github.io/information/{your-project-name}/support.html)
-```
-
-## 📋 チェックリスト
-
-新規プロジェクト追加時の確認項目：
-
-- [ ] `docs/{your-project-name}/` ディレクトリを作成
-- [ ] `privacy.html` と `support.html` を追加
-- [ ] プロジェクト固有の内容を編集完了
-- [ ] HTML の `<title>` タグを更新
-- [ ] メタデータ（最終更新日など）を更新
-- [ ] ダークモード対応を確認
-- [ ] モバイル表示を確認
+- [ ] 配布形式に合うセクションを選択
+- [ ] 必要なドキュメントディレクトリを作成
+- [ ] 必要なプライバシーポリシー・サポートページを作成
+- [ ] HTMLのタイトル、見出し、内容、最終更新日を更新
+- [ ] アイコンを `docs/product-icons/` に追加
+- [ ] `docs/index.html` に概要とリンクを追加
+- [ ] `README.md` に概要とリンクを追加
 - [ ] 外部リンクが正しいか確認
-- [ ] docs/index.html の配布形式に合うセクションに追加
-- [ ] README.md に追加
-- [ ] コミット＆プッシュ
+- [ ] レスポンシブ表示とダークモードを確認
+- [ ] `git diff --check` を実行
+- [ ] コミットして `main` にプッシュ
 
-## 📐 技術要件
+## ページの技術要件
 
-### 必須事項
-- ✅ HTML5 形式
-- ✅ UTF-8 エンコーディング
-- ✅ `<meta name="viewport">` 設定
-- ✅ 言語属性 (`<html lang="ja">` など)
-- ✅ インラインCSS（外部ファイル不可）
+### 必須
 
-### 推奨事項
-- ✅ ダークモード対応 (`@media (prefers-color-scheme: dark)`)
-- ✅ レスポンシブデザイン
-- ✅ バイリンガル（日本語・英語）
-- ✅ セマンティックHTML5
+- HTML5
+- UTF-8
+- `<meta name="viewport">`
+- 適切な言語属性（通常は `<html lang="ja">`）
+- インラインCSS
+- 外部リンクへの `target="_blank"` と `rel="noopener noreferrer"`
 
-### 非推奨
-- ❌ 外部CSS/JavaScript
-- ❌ iframe や Flash
-- ❌ 大きな画像ファイル
-- ❌ クライアント側のリダイレクト
+### 推奨
 
-## 🔗 テンプレート変数
+- 日本語・英語の併記
+- セマンティックHTML
+- `@media (prefers-color-scheme: dark)` によるダークモード対応
+- モバイル画面での表示確認
 
-テンプレートには以下のプレースホルダーが含まれます（カスタマイズが必要な部分）：
+### 避けるもの
 
-- `[App/Product Name]` - アプリケーション名
-- `[Your Company/GitHub Issues URL]` - 問い合わせ先
-- `[month/year]` - 最終更新日
-- セクション内容 - データ収集方針など
+- 外部CSS・外部JavaScriptへの依存
+- iframeやFlash
+- 不要に大きな画像
+- クライアント側のリダイレクト
 
-## ❓ よくある質問
+## テンプレート
 
-**Q: プライバシーポリシーのみでよい？**  
-A: はい、プロジェクトに必要なページだけ追加してください。
+- [プライバシーポリシーテンプレート](templates/privacy-template.html)
+- [サポートページテンプレート](templates/support-template.html)
 
-**Q: 複数言語対応は必須？**  
-A: いいえ。単一言語でも構いません。テンプレートから不要な部分を削除してください。
-
-**Q: HTTPS は対応している？**  
-A: はい、GitHub Pages はすべてのリポジトリで HTTPS をサポートしています。
-
-**Q: SEO 対策は？**  
-A: これらは法務ドキュメントのため、SEO 対策は最小限にしています。必要に応じてメタデータを追加できます。
-
-## 📧 質問・問題
-
-リポジトリの Issues で質問や問題報告ができます。
+質問や問題がある場合は、リポジトリのIssuesで報告してください。
