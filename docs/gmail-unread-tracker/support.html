@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート - Gmail Unread Tracker</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      color: #1c1c1e;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.8em; margin-bottom: 4px; }
+    h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #e5e5ea; padding-bottom: 6px; }
+    h3 { font-size: 1em; margin-top: 1.5em; margin-bottom: 4px; }
+    p, li { font-size: 0.95em; }
+    ul { padding-left: 1.5em; }
+    .updated { color: #8e8e93; font-size: 0.85em; margin-bottom: 2em; }
+    a { color: #007aff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: none; border-top: 2px solid #e5e5ea; margin: 3em 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1e; color: #f2f2f7; }
+      hr, h2 { border-color: #3a3a3c; }
+      .updated { color: #8e8e93; }
+    }
+  </style>
+</head>
+<body>
+  <h1>サポート</h1>
+  <p class="updated">Gmail Unread Tracker</p>
+  <p>Gmailの未読件数が表示されない場合は、以下をご確認ください。</p>
+
+  <h2>よくある質問</h2>
+  <h3>アカウントが一覧に表示されません</h3>
+  <p>Chromeで対象アカウントにログインした状態でGmailを開き、サイドバーの「拡張機能で追跡」を押してください。その後、オプション画面の「今すぐ再取得」を実行します。</p>
+
+  <h3>バッジに「!」が表示される、または未読数が更新されません</h3>
+  <p>Gmailにログインしていることを確認し、オプション画面で「今すぐ再取得」を実行してください。取得間隔は1、5、15、30、60分から選べます。問題が続く場合は、オプション画面の「デバッグ情報」を確認してください。</p>
+
+  <h3>追跡をやめるにはどうすればよいですか</h3>
+  <p>オプション画面で対象アカウントを削除してください。拡張機能をアンインストールすると、以後の処理は停止します。</p>
+
+  <h2>データの取り扱い</h2>
+  <p>アカウント情報、未読数、設定、取得状態はChrome内に保存します。未読数はGmailのAtomフィードから取得し、開発者のサーバーへ送信しません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>解決しない場合は、<a href="https://github.com/okasy/chrome-ext-gmail-unread-tracker/issues">GitHub Issues</a>からご連絡ください。</p>
+
+  <hr>
+
+  <h1>Support</h1>
+  <p class="updated">Gmail Unread Tracker</p>
+  <p>If unread counts are not showing, check the following steps.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>An account does not appear in the list</h3>
+  <p>Sign in to the account in Chrome, open Gmail, and click “Track with extension” in the sidebar. Then select “Refresh now” on the Options page.</p>
+
+  <h3>The badge shows “!” or the count does not update</h3>
+  <p>Make sure you are signed in to Gmail and select “Refresh now” on the Options page. You can choose an update interval of 1, 5, 15, 30, or 60 minutes. If the problem continues, check “Debug information” on the Options page.</p>
+
+  <h3>How do I stop tracking an account?</h3>
+  <p>Remove the account from the Options page. Uninstalling the Extension stops further processing.</p>
+
+  <h2>Data handling</h2>
+  <p>Account information, unread counts, settings, and fetch status are stored in Chrome. Unread counts are retrieved from Gmail's Atom feed and are not sent to a developer-operated server. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+
+  <h2>Contact</h2>
+  <p>If these steps do not resolve the problem, contact us through <a href="https://github.com/okasy/chrome-ext-gmail-unread-tracker/issues">GitHub Issues</a>.</p>
+</body>
+</html>

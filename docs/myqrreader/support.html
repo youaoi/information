@@ -30,11 +30,29 @@
       text-decoration: none;
       font-size: 0.95em;
     }
+    .store-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 1em;
+      padding: 9px 14px;
+      background: #1c1c1e;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.92em;
+      font-weight: 600;
+    }
+    .store-link:hover { background: #3a3a3c; }
+    .store-link:focus-visible { outline: 3px solid #007aff; outline-offset: 2px; }
+    .store-icon { font-size: 1.1em; line-height: 1; }
     hr { border: none; border-top: 2px solid #e5e5ea; margin: 3em 0; }
     @media (prefers-color-scheme: dark) {
       body { background: #1c1c1e; color: #f2f2f7; }
       hr, h2 { border-color: #3a3a3c; }
       .subtitle { color: #8e8e93; }
+      .store-link { background: #f2f2f7; color: #1c1c1e; }
+      .store-link:hover { background: #d1d1d6; }
     }
   </style>
 </head>
@@ -42,6 +60,10 @@
 
   <h1>サポート</h1>
   <p class="subtitle">My QR Reader</p>
+  <a class="store-link" href="https://apps.apple.com/jp/app/my-qr-reader/id6761052527" target="_blank" rel="noopener noreferrer">
+    <span class="store-icon" aria-hidden="true">↗</span>
+    App Storeで見る
+  </a>
 
   <h2>よくある質問</h2>
 
@@ -68,6 +90,10 @@
 
   <h1>Support</h1>
   <p class="subtitle">My QR Reader</p>
+  <a class="store-link" href="https://apps.apple.com/jp/app/my-qr-reader/id6761052527" target="_blank" rel="noopener noreferrer">
+    <span class="store-icon" aria-hidden="true">↗</span>
+    View on the App Store
+  </a>
 
   <h2>FAQ</h2>
 
