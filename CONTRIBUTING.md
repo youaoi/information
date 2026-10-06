@@ -71,10 +71,12 @@ GitHub Pages が自動的にデプロイされます。
 
 ### 7. README.md を更新
 
-[README.md](README.md) の「ホスト中のプロジェクト」セクションに新規プロジェクトへのリンクを追加します：
+[docs/index.html](docs/index.html) と [README.md](README.md) の「App」「Chrome拡張」「VS Code拡張」のうち、配布形式に合うセクションに新規プロジェクトを追加します。ドキュメントをこのリポジトリでホストしない場合は、プロジェクトのGitHubリポジトリへのリンクを掲載できます。
+
+README.md のプロジェクト記載例：
 
 ```markdown
-### Your Project Name
+#### Your Project Name
 - [プライバシーポリシー](https://youaoi.github.io/information/{your-project-name}/privacy.html)
 - [サポート](https://youaoi.github.io/information/{your-project-name}/support.html)
 ```
@@ -91,6 +93,7 @@ GitHub Pages が自動的にデプロイされます。
 - [ ] ダークモード対応を確認
 - [ ] モバイル表示を確認
 - [ ] 外部リンクが正しいか確認
+- [ ] docs/index.html の配布形式に合うセクションに追加
 - [ ] README.md に追加
 - [ ] コミット＆プッシュ
 

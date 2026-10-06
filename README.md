@@ -4,23 +4,56 @@
 
 GitHub Pages で公開されています: https://youaoi.github.io/information/
 
-## 📋 ホスト中のプロジェクト
+## 📋 掲載プロジェクト
 
-### My QR Reader
+### App
+
+#### My QR Reader
+- QRコードをすばやく読み取れるiOSアプリ
 - [プライバシーポリシー](https://youaoi.github.io/information/myqrreader/privacy.html)
 - [サポート](https://youaoi.github.io/information/myqrreader/support.html)
 
-### Prompt Gallery
+#### Prompt Gallery
+- AIプロンプトを見つけて整理できるiOSアプリ
 - [プライバシーポリシー](https://youaoi.github.io/information/promptgallery/privacy.html)
 - [サポート](https://youaoi.github.io/information/promptgallery/support.html)
 
-### Gee Movie Explorer
+#### Gee Movie Explorer
+- Webページで選択した動画を端末に保存し、オフラインで再生できるiOSアプリ
 - [プライバシーポリシー](https://youaoi.github.io/information/gee-movie-explorer/privacy.html)
 - [サポート](https://youaoi.github.io/information/gee-movie-explorer/support.html)
 - [審査用デモ](https://youaoi.github.io/information/gee-movie-explorer/demo.html)
 
-### Gmail Unread Tracker
+#### Host Cassettes（Mac App）
+- macOS向けのhostsファイルマネージャー
+- [GitHub リポジトリ](https://github.com/youaoi/hostcassettes)
+- [ダウンロード（Releases）](https://github.com/youaoi/hostcassettes/releases)
+
+### Chrome拡張
+
+#### Gmail Unread Tracker
+- ログイン済みのGmailアカウントの未読メール件数を表示するChrome拡張機能
 - [プライバシーポリシー](https://youaoi.github.io/information/gmail-unread-tracker/privacy.html)
+- [Chrome Web Store](https://chromewebstore.google.com/detail/jlmecjjomdibffdlidbgkdnnickphlie)
+
+#### URL Switcher for Developer
+- 登録した本番・開発・ローカルなどの環境URLを切り替えられるChrome拡張機能
+- [プライバシーポリシー](https://youaoi.github.io/information/url-switcher-for-developer/privacy.html)
+- [サポート](https://youaoi.github.io/information/url-switcher-for-developer/support.html)
+- [Chrome Web Store](https://chromewebstore.google.com/detail/binkjcibekcnomlpfkbimlejdolahona)
+
+### VS Code拡張
+- [okasyのMarketplace掲載一覧](https://marketplace.visualstudio.com/publishers/okasy)
+
+#### Sakana Fugu for VS Code
+- sakana.aiのfugu・fugu-ultraをVS Codeのチャットモデルとして利用できる拡張
+- [GitHub リポジトリ](https://github.com/youaoi/sakana-fugu-for-vscode)
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=okasy.sakana-fugu-for-vscode)
+
+#### Terminal Actions
+- サイドバーからワンクリックでターミナルコマンドを実行できる拡張
+- [GitHub リポジトリ](https://github.com/okasy/vscode-ext-local-terminal-actions)
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=okasy.local-terminal-actions)
 
 *新しいプロジェクトを追加する場合は、[CONTRIBUTING.md](CONTRIBUTING.md) をご参照ください。*
 
