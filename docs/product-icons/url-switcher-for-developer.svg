@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none" viewBox="0 0 256 256">
+  <!-- 背景: squircle（rx=57でiOSスタイルに近似） -->
+  <rect x="0" y="0" width="256" height="256" rx="57" fill="url(#bg)"/>
+
+  <!-- URLピルのグロー（発光エフェクト） -->
+  <rect x="33" y="55" width="190" height="69" rx="34" fill="url(#pill_glow1)" opacity=".2"/>
+  <rect x="34" y="56" width="188" height="67" rx="33" fill="url(#pill_glow2)" opacity=".2"/>
+
+  <!-- URLピル本体 -->
+  <rect x="38" y="60" width="179" height="57" rx="28.5" fill="url(#pill)" stroke="url(#pill_stroke)" stroke-width="1.5"/>
+
+  <!-- 中央白丸（大: 環境ドットを囲む） -->
+  <circle cx="128" cy="89" r="29.5" fill="url(#white)"/>
+
+  <!-- 環境ドット: 左（緑）・中（黄）・右（青） -->
+  <circle cx="67" cy="89" r="11.75" fill="url(#green)" stroke="#194B38" stroke-width=".75"/>
+  <circle cx="128" cy="89" r="9.25" fill="url(#yellow)" stroke="#D39900" stroke-width=".75"/>
+  <circle cx="189" cy="89" r="11.75" fill="url(#blue)" stroke="#18304C" stroke-width=".75"/>
+
+  <!-- コードエリア: 外側（グレー枠） -->
+  <rect x="37" y="145" width="182" height="54" rx="14" fill="url(#code_border)"/>
+  <!-- コードエリア: 内側（背景色で重ねてフレーム効果） -->
+  <rect x="43" y="149" width="170" height="45" rx="9" fill="url(#bg)"/>
+
+  <!-- テキスト行1: 青（URL/変数） -->
+  <rect x="57" y="160" width="73" height="7" rx="3.5" fill="url(#text_blue)"/>
+  <!-- テキスト行1: 小青（属性） -->
+  <rect x="139" y="160" width="14" height="7" rx="3.5" fill="url(#text_blue2)"/>
+  <!-- テキスト行2: グレー（プレーンテキスト） -->
+  <rect x="57" y="175" width="60" height="7" rx="3.5" fill="url(#text_gray)"/>
+  <!-- テキスト行2: 黄（ハイライト値） -->
+  <rect x="127" y="175" width="26" height="7" rx="3.5" fill="url(#text_yellow)" stroke="#BA9209" stroke-width=".75"/>
+
+  <!-- コードブラケット: < -->
+  <polyline points="179,161 166,171 179,181" fill="none" stroke="url(#bracket)" stroke-width="3.5" stroke-linejoin="miter" stroke-linecap="round"/>
+  <!-- コードブラケット: > -->
+  <polyline points="190,161 203,171 190,181" fill="none" stroke="url(#bracket)" stroke-width="3.5" stroke-linejoin="miter" stroke-linecap="round"/>
+
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1"
+        gradientTransform="translate(128 66.91) scale(248.6 246.2)"
+        gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D527A" offset="0"/>
+      <stop stop-color="#0E203A" offset="1"/>
+    </radialGradient>
+    <radialGradient id="pill_glow1" cx="0" cy="0" r="1"
+        gradientTransform="translate(128 89.7) scale(78.22 37.61)"
+        gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4476B5" offset="0"/>
+      <stop stop-color="#4476B5" stop-opacity=".01" offset="1"/>
+    </radialGradient>
+    <radialGradient id="pill_glow2" cx="0" cy="0" r="1"
+        gradientTransform="translate(128 89.2) scale(78.72 35.99)"
+        gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3965A4" offset="0"/>
+      <stop stop-color="#305687" stop-opacity=".01" offset="1"/>
+    </radialGradient>
+    <linearGradient id="pill" x1="127.4" x2="127.4" y1="60" y2="117" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#192A3E" offset="0"/>
+      <stop stop-color="#182C42" offset="1"/>
+    </linearGradient>
+    <linearGradient id="pill_stroke" x1="127.4" x2="127.4" y1="60" y2="117" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#30425B" offset="0"/>
+      <stop stop-color="#213954" offset="1"/>
+    </linearGradient>
+    <radialGradient id="white" cx="0" cy="0" r="1"
+        gradientTransform="translate(128 88.36) scale(29.62 29.75)"
+        gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" offset="0"/>
+      <stop stop-color="#F1F2F3" offset="1"/>
+    </radialGradient>
+    <linearGradient id="green" x1="66.84" x2="66.84" y1="77" y2="101" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#40BA72" offset="0"/>
+      <stop stop-color="#309951" offset="1"/>
+    </linearGradient>
+    <linearGradient id="yellow" x1="128" x2="128" y1="79" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DF9800" offset="0"/>
+      <stop stop-color="#F1B916" offset="1"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="188.7" x2="188.7" y1="77" y2="101" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4691EB" offset="0"/>
+      <stop stop-color="#3273CF" offset="1"/>
+    </linearGradient>
+    <linearGradient id="code_border" x1="128" x2="128" y1="145" y2="199" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#818C99" offset="0"/>
+      <stop stop-color="#636B75" offset="1"/>
+    </linearGradient>
+    <linearGradient id="text_blue" x1="94" x2="94" y1="160" y2="167" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4691EB" offset="0"/>
+      <stop stop-color="#3273CF" offset="1"/>
+    </linearGradient>
+    <linearGradient id="text_blue2" x1="147" x2="147" y1="160" y2="167" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#578BC9" offset="0"/>
+      <stop stop-color="#4170AF" offset="1"/>
+    </linearGradient>
+    <linearGradient id="text_gray" x1="87" x2="87" y1="175" y2="182" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#818C99" offset="0"/>
+      <stop stop-color="#757D86" offset="1"/>
+    </linearGradient>
+    <linearGradient id="text_yellow" x1="140" x2="140" y1="175" y2="182" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5C026" offset="0"/>
+      <stop stop-color="#F1B916" offset="1"/>
+    </linearGradient>
+    <linearGradient id="bracket" x1="183" x2="183" y1="157" y2="184" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6FEFF" offset="0"/>
+      <stop stop-color="#E8F0F4" offset="1"/>
+    </linearGradient>
+  </defs>
+</svg>

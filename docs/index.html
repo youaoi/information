@@ -43,10 +43,22 @@
       transform: translateY(-4px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
+    .project-heading {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .project-icon {
+      width: 64px;
+      height: 64px;
+      flex: 0 0 64px;
+      border-radius: 14px;
+      object-fit: cover;
+    }
     .project-name {
       font-size: 1.3em;
       font-weight: 600;
-      margin-bottom: 12px;
     }
     .docs-list {
       list-style: none;
@@ -152,7 +164,10 @@
     <div class="projects">
       <!-- My QR Reader -->
       <div class="project-card">
-        <div class="project-name">My QR Reader</div>
+        <div class="project-heading">
+          <img class="project-icon" src="product-icons/myqrreader.png" alt="" aria-hidden="true">
+          <div class="project-name">My QR Reader</div>
+        </div>
         <ul class="docs-list">
           <li><a href="myqrreader/privacy.html" class="docs-link">プライバシーポリシー</a></li>
           <li><a href="myqrreader/support.html" class="docs-link">サポート</a></li>
@@ -167,7 +182,10 @@
 
       <!-- Prompt Gallery -->
       <div class="project-card">
-        <div class="project-name">Prompt Gallery</div>
+        <div class="project-heading">
+          <img class="project-icon" src="product-icons/promptgallery.png" alt="" aria-hidden="true">
+          <div class="project-name">Prompt Gallery</div>
+        </div>
         <ul class="docs-list">
           <li><a href="promptgallery/privacy.html" class="docs-link">プライバシーポリシー</a></li>
           <li><a href="promptgallery/support.html" class="docs-link">サポート</a></li>
@@ -179,7 +197,10 @@
 
       <!-- Gee Movie Explorer -->
       <div class="project-card">
-        <div class="project-name">Gee Movie Explorer</div>
+        <div class="project-heading">
+          <img class="project-icon" src="product-icons/gee-movie-explorer.png" alt="" aria-hidden="true">
+          <div class="project-name">Gee Movie Explorer</div>
+        </div>
         <ul class="docs-list">
           <li><a href="gee-movie-explorer/privacy.html" class="docs-link">プライバシーポリシー</a></li>
           <li><a href="gee-movie-explorer/support.html" class="docs-link">サポート</a></li>
@@ -192,7 +213,10 @@
 
       <!-- Gmail Unread Tracker -->
       <div class="project-card">
-        <div class="project-name">Gmail Unread Tracker</div>
+        <div class="project-heading">
+          <img class="project-icon" src="product-icons/gmail-unread-tracker.svg" alt="" aria-hidden="true">
+          <div class="project-name">Gmail Unread Tracker</div>
+        </div>
         <ul class="docs-list">
           <li><a href="gmail-unread-tracker/privacy.html" class="docs-link">プライバシーポリシー</a></li>
           <li><a href="gmail-unread-tracker/support.html" class="docs-link">サポート</a></li>
@@ -204,7 +228,10 @@
 
       <!-- URL Switcher for Developer -->
       <div class="project-card">
-        <div class="project-name">URL Switcher for Developer</div>
+        <div class="project-heading">
+          <img class="project-icon" src="product-icons/url-switcher-for-developer.svg" alt="" aria-hidden="true">
+          <div class="project-name">URL Switcher for Developer</div>
+        </div>
         <ul class="docs-list">
           <li><a href="url-switcher-for-developer/privacy.html" class="docs-link">プライバシーポリシー</a></li>
           <li><a href="url-switcher-for-developer/support.html" class="docs-link">サポート</a></li>
