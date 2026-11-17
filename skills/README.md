@@ -5,7 +5,7 @@ Shared source for my Claude Code skills, so they can be installed on every PC/Ma
 | Skill | Purpose |
 |---|---|
 | [task-orchestrator](task-orchestrator/SKILL.md) | Splits development work across Opus / Sonnet / Haiku and runs Haiku subagents in parallel |
-| [dig](dig/SKILL.md) | Interviews me one question at a time about a plan or design until we share an understanding (based on [ryonakae/dotfiles](https://github.com/ryonakae/dotfiles/tree/master/config/.agents/skills/dig), with extra trigger phrases) |
+| [dig](dig/SKILL.md) | Interviews me about a plan or design until we share an understanding: maps risky assumptions first, then asks up to 3 questions per round in Claude Code's question dialog (recommended option first, with pros and cons), checks failure modes and a completion checklist, and keeps a dig log in `docs/dig/` (based on [ryonakae/dotfiles](https://github.com/ryonakae/dotfiles/tree/master/config/.agents/skills/dig), with extra trigger phrases; also inspired by [fumiya-kume/claude-code](https://github.com/fumiya-kume/claude-code/tree/master/dig)) |
 | [grill-me](grill-me/SKILL.md) | Alias of `dig`; also triggered by phrases like "ask me if anything is unclear" |
 
 ## Install (user level, all projects)
